@@ -40,6 +40,43 @@ HipLab — 힙합 장르 탐색 + 트렌드 검색 + 비트/가사 생성 서비
 
 ## 코드 원칙
 
+1. **파일 구조**: import → 상수/타입 → private → public (일관된 순서)
+2. **Import**: 표준/서드파티/로컬 3그룹 구분 (빈 줄 1개)
+3. **상수 집중화**: 매직넘버, 반복 문자열은 상수로 정의
+4. **Type 안전**: 함수 시그니처에 타입 명시 (TypeScript strict mode)
+5. **에러 처리**: bare catch 금지, 구체적 예외 처리
+6. **함수 우선**: 함수 기반 기본, 상태 관리 필요 시만 클래스/훅
+
+## Core Principles
+
 - **Simplicity First**: 최소한의 코드로 목표 달성
-- **No AI Slop**: AI가 만든 촌스러운 패턴 금지 (불필요한 주석, 과도한 추상화 등)
+- **No AI Slop**: AI가 만든 촌스러운 패턴 금지 (불필요한 주석, 과도한 추상화, 의미 없는 변수명 등)
+- **No Laziness**: 근본 원인 해결, 임시 수정 금지
+- **Minimal Impact**: 필요한 부분만 변경
 - **Mobile First**: 모바일 반응형 우선 설계
+
+## Workflow Orchestration
+
+1. **Plan First**: 3단계 이상 또는 아키텍처 결정 시 plan mode 진입
+2. **테스트 선행**: 테스트 먼저 작성 → 구현이 통과시키는 패턴
+3. **커밋 분리**: 대규모 변경 시 논리적 단위로 커밋 분리 (모듈/테스트/설정)
+4. **역할 분리**: 파일 3개+ 변경 시 구현 ≠ 검증 에이전트 분리
+5. **Subagent**: 연구/탐색/병렬 분석을 subagent로 오프로드
+6. **Verification**: 완료 전 테스트/로그/diff 확인 필수
+
+## AI Collaboration Rules
+
+1. **의도 먼저**: 목표/입력/출력/실패조건/완료기준 확인. 기준 없는 비단순 작업은 구현 금지.
+2. **검증 선행**: 테스트/검증 기준은 구현 전 사전 정의. pass/fail 없으면 미완료.
+3. **역할 분리**: 중요한 작업은 작성 ≠ 검증. critic/debugger/verifier 분리.
+4. **결정론적 게이트**: 테스트 통과가 완료 기준. "AI가 괜찮다"는 불충분.
+5. **고위험 에스컬레이션**: 인증/권한, DB 스키마, 인프라, 토큰, 새 의존성 → 사용자 확인 필수.
+6. **관측성 필수**: 새 기능은 추적 가능한 로그/ID 포함.
+7. **롤백 설계**: 실패 시 끌 수 있는 방법 + 재실행 멱등성.
+
+## Task Management
+
+1. **Plan First**: `tasks/todo.md`에 체크리스트 작성
+2. **Track Progress**: 진행 중 체크
+3. **Capture Lessons**: `tasks/lessons.md`에 교훈 기록
+4. **작업 로그**: `tasks/worklogs/YYMMDD-HHmm-{주제}.md`
