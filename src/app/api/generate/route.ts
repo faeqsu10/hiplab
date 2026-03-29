@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
       model: "gemini-2.5-flash",
       generationConfig: {
         responseMimeType: "application/json",
-        maxOutputTokens: 2000,
+        maxOutputTokens: 4096,
       },
     });
 
