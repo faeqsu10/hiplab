@@ -4,6 +4,16 @@
 
 6개 힙합 장르(Trap, Boom Bap, Drill, Lo-fi, Rage, G-Funk)의 특징을 알려주고, AI로 가사와 Suno/Udio용 프롬프트를 생성합니다. 같은 주제를 다른 장르로 변환하면서 장르 간 차이를 체감할 수 있습니다.
 
+## 스크린샷
+
+### 홈 — 6개 장르 카드
+
+![홈 페이지](docs/screenshots/home.png)
+
+### 장르 상세 + AI 생성
+
+![장르 상세 페이지](docs/screenshots/genre-detail.png)
+
 ## 주요 기능
 
 - **장르 탐색**: "왜 이런 소리일까?" 설명 + 핵심 요소(드럼/베이스/멜로디/플로우) + 대표곡
