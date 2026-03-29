@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --border: #262626;
+  --text-primary: #e5e5e5;
+  --text-secondary: #737373;
+  --accent: #00FF41;
+  --accent-hover: #00CC33;
+  --error: #EF4444;
+
+  --genre-trap: #EF4444;
+  --genre-boom-bap: #F59E0B;
+  --genre-drill: #64748B;
+  --genre-lofi: #5EEAD4;
+  --genre-rage: #EC4899;
+  --genre-gfunk: #10B981;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+code, .font-mono {
+  font-family: "Geist Mono", ui-monospace, monospace;
+}
